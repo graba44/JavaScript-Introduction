@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Walidacja formularza</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="content">
+
+        <h1 class="header1">Projekt - Walidator formularza</h1>
+        <h1>Formularz kontaktowy</h1>
+        
+        <form action="#" id="form">
+
+        <fieldset>
+            <label>
+                Imię*
+                <input type="text" name="firstName" placeholder="Twoje imię">
+            </label>
+
+            <label>
+                Nazwisko*
+                <input type="text" name="lastName" placeholder="Twoje nazwisko">
+            </label>
+
+            <label>
+                Adres e-mail*
+                <input type="text" name="email" placeholder="Twój adres e-mail">
+            </label>
+
+            <label>
+                Temat
+                <select name="subject">
+                    <option>Wybierz temat</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select>
+            </label>
+
+            <label class="msg">
+                Wiadomość*
+                <textarea form="form" name="message" maxlength="255">
+                    
+                </textarea>
+            </label>
+            <label>
+                <input type="submit" class="btn" name="submit">
+            </label>
+            <label>
+                <input type="reset" class="btn" name="reset">
+            </label>
+            
+        </fieldset>   
+
+        </form>
+          
+    </div>
+
+    <script src="validation.js"></script>
+</body>
+</html>
