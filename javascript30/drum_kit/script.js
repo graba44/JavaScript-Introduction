@@ -5,16 +5,16 @@ window.addEventListener("keydown", function(e) {
     
     if(!audio) return; //zatrzymuje działanie funkcji
 
-    audio.currentTime = 0; //przewija audio na sam początek
+    audio.currentTime = 0; //currentTime cofa do tyłu do danej sekundy(w tym wypadku do zerowej, czyli początku)
     audio.play();
     key.classList.add("playing");
 
 });
 
-
 function removeTransition(e) {
 
-    if(e.propertyName !== "transition") return;
+    //usuwa animacje, przejście(transition) wtedy kiedy nie ma właściwości transform i wtedy usuwa klasę playing
+    if(e.propertyName !== "transform") return;
     this.classList.remove("playing"); //this odwołuje sie do key, usuwa mu klasę playing
 }
 

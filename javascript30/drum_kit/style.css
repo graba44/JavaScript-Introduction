@@ -1,1 +1,54 @@
+html{
+    background-image: url(background/background.png);
+    font-size: 15px;
+}
 
+body{
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-family: "Lato", sans-serif;
+}
+
+/*
+align-items: center - wyśrodkowuje wszystkie elementy względem osi OY
+justify-content: center - wyśrodkowuje wszystkie elementy względem osi OX
+flex: 1 - każdy element flexa jest równy
+*/
+.keys{
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.key{
+    flex: 1;
+    border: 0.2rem solid black;
+    border-radius: 0.5rem;
+    margin: 1rem;
+    padding: 2rem;
+    text-align: center;
+    width: 7rem;
+    background-color: #3d3d3d;
+    text-shadow: 0.2rem 0.2rem black;
+    transition: all 0.1s ease;
+}
+/*
+box-shadow: przesunięcie OX, przesunięcie OY, rozmazanie, kolor
+*/
+.playing{
+    transform: scale(1.1);
+    border-color: #5782c6;
+    box-shadow: 0 0 3rem #5782c6;
+}
+.sound{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: #5782c6;
+}   
+
+kbd{
+    display: block;
+    font-size: 5rem;
+}
