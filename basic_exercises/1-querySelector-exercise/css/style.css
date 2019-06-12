@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    margin:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fefefe;
+    overflow: hidden;
+}
+body.win {
+    background: url(../images/bgg.jpg);
+    background-size: cover;
+}
+.video-cnt {
+    max-width:1200px;
+    width:100%;
+}
+.video-cnt > div {
+    padding-top:56.25%;
+    position: relative;
+}
+.video-cnt iframe {
+    position: absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+}
+.container {
+    height:80vmin;
+    width:80vmin;
+    margin:20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    background: url(../images/container-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container > div {
+    flex-basis: calc(100% / 7);
+}
+.el,
+.el.last-attempt span {
+    background: #8283a7;
+    font-family: 'Pacifico', cursive;
+    display: flex;
+    font-size:3rem;
+    color: #fff;
+    text-shadow: 1px 1px 1px #fff;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 1px rgba(0,0,0,1);
+}
+.el.last-attempt {
+    background: none;
+    box-shadow: none;
+}
+.el.last-attempt span {
+    width: 100%;
+    height: 100%;
+}
+.el:not(.last-attempt):before {
+    content:"";
+    padding-top:100%;
+    display: block;
+}
+
+.first-attempt.active,
+[data-border][data-el-active],
+span.active:not(.inactive),
+.hack[title="hacking"],
+.hijack:not([title]):not([data-hack-active]),
+.st1.st2[style*="color:"][style*="font-size:"][style*="red"][style*="15px"],
+.del[data-hack-active]:not([data-hack-inactive]):not(.hijack),
+.last-attempt span[style^="display"][style*="none"] {
+    animation-delay: 1s;
+    opacity:0;
+}
+.last-img {
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+
