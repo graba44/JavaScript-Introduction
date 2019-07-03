@@ -24,7 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     form.addEventListener("submit", (e) => {
         e.preventDefault();
-        let word = document.getElementById("word");
+        let word = document.querySelector("#word");
+        word.value = word.value.toLowerCase().replace(/[^a-z]+/g, " ");
         let reversed = word.value.split("").reverse().join("");
         let checkPalindrome = (word.value === reversed) ? "This word is a palindrome." : "This word is not a palindrome.";
 
