@@ -1,0 +1,49 @@
+$main-font-family: "Lato", sans-serif;
+$main-font-color: #fff;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgb(90, 171, 230), rgb(13, 75, 120));
+    font-family: $main-font-family;
+    color: $main-font-color;
+
+    .location,
+    .temperature{
+        width: 50%;
+        height: 30vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .temperature{
+        flex-direction: column;
+
+        .degree-section{
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            h2{
+                font-size: 40px;
+            }
+
+            span{
+                margin: 10px;
+                font-size: 30px;
+            }
+        }
+    }
+
+
+}
